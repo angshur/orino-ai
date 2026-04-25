@@ -1,7 +1,7 @@
 import { FadeUp } from "@/components/ui/FadeUp";
 
 const plans = [
-  { name: "Starter",    audience: "Local businesses",           price: "$299/mo", bg: "bg-[rgba(122,181,212,0.08)]", border: "border-[rgba(122,181,212,0.2)]" },
+  { name: "Starter",    audience: "Local businesses",           price: "$299/mo", bg: "bg-[rgba(106,175,194,0.08)]", border: "border-[rgba(106,175,194,0.2)]" },
   { name: "Growth",     audience: "Multi-location & mid-market", price: "$599/mo", bg: "bg-[rgba(212,113,78,0.07)]",  border: "border-[rgba(212,113,78,0.2)]"  },
   { name: "Sales Team", audience: "B2B outreach & SDR",         price: "$999/mo", bg: "bg-warm",                     border: "border-[rgba(26,26,26,0.1)]"    },
 ];

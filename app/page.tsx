@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import Products from "@/components/Products";
+import ProblemSolution from "@/components/ProblemSolution";
 import HowItWorks from "@/components/HowItWorks";
 import WhoItsFor from "@/components/WhoItsFor";
 import CaseStudy from "@/components/CaseStudy";
@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <main>
         <Hero />
-        <Products />
+        <ProblemSolution />
         <HowItWorks />
         <WhoItsFor />
         <CaseStudy />

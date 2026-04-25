@@ -53,7 +53,7 @@ export default function WhoItsFor() {
             <FadeUp key={t.title} delay={t.delay}>
               <div className="group flex gap-4 rounded-card border border-[rgba(26,26,26,0.08)] bg-bg p-7
                 hover:bg-surface hover:border-[rgba(26,26,26,0.14)] hover:shadow-card-hover transition-all duration-200 cursor-default">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] bg-[rgba(122,181,212,0.12)]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] bg-[rgba(122,173,168,0.18)]">
                   {t.icon}
                 </div>
                 <div>

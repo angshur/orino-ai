@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1440">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,600;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #ede8de;
+  --card-bg: #f4f0e7;
+  --sara-bg: #b6cdd9;
+  --text: #1c1814;
+  --muted: #6e6560;
+  --border: #d6d0c6;
+  --green: #1b7a55;
+  --blue: #2b4fb5;
+}
+html, body {
+  width: 1440px;
+  height: 720px;
+  overflow: hidden;
+  background: var(--bg);
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+}
+.canvas {
+  width: 1440px;
+  height: 720px;
+  background: var(--bg);
+  padding: 40px 48px 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.module-label {
+  font-family: 'Lora', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.2px;
+}
+.body-row {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0 36px;
+  min-height: 0;
+}
+.divider { background: var(--border); }
+
+/* ── PROBLEM PANEL ── */
+.problem-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+.part-tag {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.panel-title {
+  font-family: 'Lora', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+  margin-top: 2px;
+}
+.panel-desc {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.problem-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+  min-height: 0;
+}
+.pcard {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pcard-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #e8e3d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pcard-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+.pcard-sub {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+/* ── SOLUTION PANEL ── */
+.solution-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+}
+.solution-tag {
+  display: inline-flex;
+  align-items: center;
+  background: #e5e0d6;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3px 11px;
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--muted);
+  width: fit-content;
+  letter-spacing: 0.2px;
+}
+.solution-name {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.solution-heading {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+  margin-top: 4px;
+}
+.solution-heading em { font-style: italic; }
+.solution-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-top: 2px;
+}
+.feature-card {
+  flex: 1;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  min-height: 0;
+}
+.feat-illustration {
+  width: 210px;
+  flex-shrink: 0;
+  background: var(--sara-bg);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.feat-illustration svg.dots {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.feat-illustration .illus-text {
+  position: relative;
+  z-index: 1;
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  padding: 18px;
+  line-height: 1.35;
+}
+.feat-list-panel {
+  flex: 1;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.live-today {
+  align-self: flex-end;
+  background: var(--green);
+  color: white;
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.feat-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 0;
+  border-bottom: 1px solid #e4dfd6;
+}
+.feat-item:last-child { border-bottom: none; }
+.feat-item-icon { width: 20px; height: 20px; flex-shrink: 0; opacity: 0.55; }
+.feat-item-name {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+}
+.badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 10px;
+}
+.badge-live { background: #e5f2ec; color: var(--green); }
+.badge-ai   { background: #e6eaf8; color: var(--blue); }
+.cta-btn {
+  margin-top: 10px;
+  align-self: center;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 7px 22px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <!-- Module label -->
+  <div class="module-label">Module 1: The AI Receptionist Problem-Solution.</div>
+
+  <!-- Two-column body -->
+  <div class="body-row">
+
+    <!-- LEFT: Problem -->
+    <div class="problem-panel">
+      <div>
+        <div class="part-tag">Part 1</div>
+        <div class="panel-title">AI Receptionist Problem:<br>Mismanaged Call Load.</div>
+        <div class="panel-desc" style="margin-top:8px">See how current intake can fail without automation.</div>
+      </div>
+
+      <div class="problem-grid">
+        <!-- Card 1 -->
+        <div class="pcard">
+          <div class="pcard-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <path d="M9 4h8a2 2 0 0 1 0 4H9a2 2 0 0 1 0-4z" fill="#c2b8aa"/>
+              <path d="M5 9.5C6.5 8.5 8 9 9.5 10.5L10.8 12a1 1 0 0 1 0 1.4l-1.2 1.2c.6 1.2 1.4 2.3 2.4 3.3 1 1 2.1 1.8 3.3 2.4l1.2-1.2a1 1 0 0 1 1.4 0l1.5 1.3c1.5 1.5 2 3 1 4.5-2.5 3.5-8 1-12-3S1.5 13 5 9.5z" fill="#b0a898"/>
+              <circle cx="20" cy="7" r="4" fill="#d97070"/>
+              <path d="M18.5 7h3M20 5.5v3" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="pcard-label">Missed calls, lost revenue.</div>
+            <div class="pcard-sub">High-value leads slip through the cracks.</div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="pcard">
+          <div class="pcard-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <rect x="6" y="3" width="14" height="18" rx="2" fill="#c2b8aa"/>
+              <path d="M9 9h8M9 12h8M9 15h5" stroke="#f4f0e7" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="20" cy="6" r="4" fill="#d97070"/>
+              <path d="M18.5 6l3 3M21.5 6l-3 3" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="pcard-label">Intake that doesn't qualify.</div>
+            <div class="pcard-sub">Wrong leads waste staff time and budget.</div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="pcard">
+          <div class="pcard-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <circle cx="7" cy="13" r="4.5" fill="#8ab5c8" opacity="0.75"/>
+              <circle cx="19" cy="13" r="4.5" fill="#8ab5c8" opacity="0.75"/>
+              <path d="M11.5 13h3" stroke="#b8a89a" stroke-width="1.8" stroke-dasharray="1.5 2" stroke-linecap="round"/>
+              <path d="M14 10l2-2M14 10l2 2" stroke="#b8a89a" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="pcard-label">Systems that don't connect.</div>
+            <div class="pcard-sub">Data siloed across disconnected tools.</div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="pcard">
+          <div class="pcard-icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+              <rect x="4"  y="17" width="4" height="6" rx="1" fill="#c2b8aa"/>
+              <rect x="11" y="13" width="4" height="10" rx="1" fill="#c2b8aa"/>
+              <rect x="18" y="9"  width="4" height="14" rx="1" fill="#c2b8aa"/>
+              <path d="M5 12l6-4 5 2 5-6" stroke="#c87060" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <div>
+            <div class="pcard-label">Overhead that doesn't show ROI.</div>
+            <div class="pcard-sub">Rising costs with no measurable return.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="divider"></div>
+
+    <!-- RIGHT: Solution -->
+    <div class="solution-panel">
+      <div class="solution-tag">The solution</div>
+      <div>
+        <div class="solution-name">The AI Receptionist Solution</div>
+        <div class="solution-heading">One intelligent system.<br><em>An entire workforce.</em></div>
+        <div class="solution-desc">Smith AI isn't just a receptionist. It's a fully staffed front office — AI and live agents working together to handle every call, end-to-end. Deeply context-aware and connected to your systems.</div>
+      </div>
+
+      <!-- Feature card -->
+      <div class="feature-card">
+        <!-- Illustration -->
+        <div class="feat-illustration">
+          <svg class="dots" viewBox="0 0 210 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <circle cx="25"  cy="25"  r="22" fill="white" opacity="0.18"/>
+            <circle cx="95"  cy="15"  r="28" fill="white" opacity="0.13"/>
+            <circle cx="175" cy="35"  r="19" fill="white" opacity="0.16"/>
+            <circle cx="10"  cy="95"  r="26" fill="white" opacity="0.11"/>
+            <circle cx="80"  cy="85"  r="34" fill="white" opacity="0.14"/>
+            <circle cx="165" cy="100" r="22" fill="white" opacity="0.18"/>
+            <circle cx="40"  cy="165" r="30" fill="white" opacity="0.16"/>
+            <circle cx="120" cy="170" r="25" fill="white" opacity="0.12"/>
+            <circle cx="185" cy="160" r="20" fill="white" opacity="0.15"/>
+            <circle cx="15"  cy="240" r="24" fill="white" opacity="0.11"/>
+            <circle cx="90"  cy="245" r="32" fill="white" opacity="0.14"/>
+            <circle cx="170" cy="235" r="26" fill="white" opacity="0.17"/>
+            <circle cx="55"  cy="315" r="20" fill="white" opacity="0.18"/>
+            <circle cx="145" cy="310" r="24" fill="white" opacity="0.13"/>
+            <circle cx="200" cy="330" r="18" fill="white" opacity="0.15"/>
+            <circle cx="30"  cy="370" r="28" fill="white" opacity="0.12"/>
+            <circle cx="110" cy="375" r="22" fill="white" opacity="0.16"/>
+          </svg>
+          <div class="illus-text">Meet your new<br>AI workforce.</div>
+        </div>
+
+        <!-- Feature list -->
+        <div class="feat-list-panel">
+          <div class="live-today">LIVE TODAY</div>
+          <div class="feat-item">
+            <svg class="feat-item-icon" viewBox="0 0 20 20" fill="none"><path d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2z" stroke="#6e6560" stroke-width="1.4"/><path d="M10 6v5l3 2" stroke="#6e6560" stroke-width="1.4" stroke-linecap="round"/></svg>
+            <span class="feat-item-name">Intake agent</span>
+            <span class="badge badge-live">Live</span>
+          </div>
+          <div class="feat-item">
+            <svg class="feat-item-icon" viewBox="0 0 20 20" fill="none"><rect x="4" y="3" width="12" height="14" rx="2" stroke="#6e6560" stroke-width="1.4"/><path d="M7 8h6M7 11h4" stroke="#6e6560" stroke-width="1.4" stroke-linecap="round"/></svg>
+            <span class="feat-item-name">Qualification agent</span>
+            <span class="badge badge-live">Live</span>
+          </div>
+          <div class="feat-item">
+            <svg class="feat-item-icon" viewBox="0 0 20 20" fill="none"><path d="M4 16V8l6-5 6 5v8" stroke="#6e6560" stroke-width="1.4" stroke-linejoin="round"/><rect x="8" y="12" width="4" height="4" rx="0.5" stroke="#6e6560" stroke-width="1.4"/></svg>
+            <span class="feat-item-name">Data backup agent</span>
+            <span class="badge badge-live">Live</span>
+          </div>
+          <div class="feat-item">
+            <svg class="feat-item-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#6e6560" stroke-width="1.4"/><path d="M10 7v3l2 2" stroke="#6e6560" stroke-width="1.4" stroke-linecap="round"/></svg>
+            <span class="feat-item-name">Call routing agent</span>
+            <span class="badge badge-live">Live</span>
+          </div>
+          <div class="feat-item">
+            <svg class="feat-item-icon" viewBox="0 0 20 20" fill="none"><path d="M10 3v14M3 10h14" stroke="#6e6560" stroke-width="1.4" stroke-linecap="round"/><circle cx="10" cy="10" r="7" stroke="#6e6560" stroke-width="1.4"/></svg>
+            <span class="feat-item-name">Automations agent</span>
+            <span class="badge badge-live">Live</span>
+          </div>
+          <div class="feat-item">
+            <svg class="feat-item-icon" viewBox="0 0 20 20" fill="none"><circle cx="5" cy="10" r="2.5" stroke="#6e6560" stroke-width="1.4"/><circle cx="15" cy="10" r="2.5" stroke="#6e6560" stroke-width="1.4"/><path d="M7.5 10h5" stroke="#6e6560" stroke-width="1.4" stroke-linecap="round"/></svg>
+            <span class="feat-item-name">Live agent network</span>
+            <span class="badge badge-ai">AI Network</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="cta-btn">Get Started with the Future</button>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

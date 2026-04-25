@@ -18,7 +18,7 @@ export default function FinalCTA() {
                 Book Your Free Call
               </a>
               <div className="flex items-center justify-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(122,181,212,0.2)] text-sky text-[13px] font-semibold">B</div>
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(106,175,194,0.2)] text-sky text-[13px] font-semibold">B</div>
                 <p className="text-[13px] text-[rgba(255,255,255,0.35)]">
                   <a href="https://www.linkedin.com/in/bipashahr/" target="_blank" rel="noopener noreferrer"
                     className="text-[rgba(255,255,255,0.5)] hover:text-white transition-colors">Bipasha</a>

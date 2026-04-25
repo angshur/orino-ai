@@ -3,19 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --bg:           #F9F7F2;
-  --surface:      #FFFFFF;
-  --surface-warm: #F2EFE8;
-  --text:         #1A1A1A;
-  --muted:        #6B6560;
+  --bg:           #ede8de;
+  --surface:      #f4f0e7;
+  --surface-warm: #e5dfd4;
+  --text:         #1c1814;
+  --muted:        #6e6560;
   --dim:          #9B948D;
-  --sky:          #7AB5D4;
-  --sky-light:    rgba(122,181,212,0.12);
-  --terra:        #D4714E;
-  --terra-light:  rgba(212,113,78,0.10);
-  --border:       rgba(26,26,26,0.08);
-  --border-mid:   rgba(26,26,26,0.14);
-  --green:        #5E9E7E;
+  --sky:          #6AAFC2;
+  --sky-light:    rgba(106,175,194,0.13);
+  --terra:        #C87050;
+  --terra-light:  rgba(200,112,80,0.10);
+  --sage:         #7AADA8;
+  --sage-light:   rgba(122,173,168,0.15);
+  --border:       #d6d0c6;
+  --border-mid:   rgba(28,24,20,0.14);
+  --green:        #1b7a55;
+  --blue:         #2b4fb5;
 }
 
 * { box-sizing: border-box; }
@@ -30,7 +33,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Grain texture utility — applied via ::before on coloured surfaces */
 .grain {
   position: relative;
   isolation: isolate;

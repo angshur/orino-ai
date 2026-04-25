@@ -13,7 +13,7 @@ export default function HowItWorks() {
 
         <FadeUp>
           <div className="text-center mb-14">
-            <span className="inline-flex items-center rounded-tag bg-[rgba(122,181,212,0.12)] border border-[rgba(122,181,212,0.2)] px-3.5 py-1 text-[11px] font-semibold tracking-[0.08em] uppercase text-sky mb-5">
+            <span className="inline-flex items-center rounded-tag bg-[rgba(122,173,168,0.18)] border border-[rgba(106,175,194,0.2)] px-3.5 py-1 text-[11px] font-semibold tracking-[0.08em] uppercase text-sky mb-5">
               The process
             </span>
             <h2 style={{ fontSize: "clamp(26px,4vw,38px)", fontWeight: 700, lineHeight: 1.15, letterSpacing: "-0.02em" }}>

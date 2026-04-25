@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-[1120px] px-8 text-center">
 
         {/* Eyebrow pill */}
-        <div className="inline-flex items-center gap-2 rounded-tag bg-[rgba(122,181,212,0.15)] border border-[rgba(122,181,212,0.25)] px-4 py-1.5 mb-8">
+        <div className="inline-flex items-center gap-2 rounded-tag bg-[rgba(106,175,194,0.15)] border border-[rgba(106,175,194,0.25)] px-4 py-1.5 mb-8">
           <span className="h-1.5 w-1.5 rounded-full bg-sky" />
           <span className="text-[12px] font-semibold tracking-[0.07em] uppercase text-sky">
             AI for local businesses &amp; sales teams

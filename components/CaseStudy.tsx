@@ -7,7 +7,7 @@ export default function CaseStudy() {
 
         <FadeUp>
           <div className="text-center mb-14">
-            <span className="inline-flex items-center rounded-tag bg-[rgba(122,181,212,0.12)] border border-[rgba(122,181,212,0.2)] px-3.5 py-1 text-[11px] font-semibold tracking-[0.08em] uppercase text-sky mb-5">
+            <span className="inline-flex items-center rounded-tag bg-[rgba(122,173,168,0.18)] border border-[rgba(106,175,194,0.2)] px-3.5 py-1 text-[11px] font-semibold tracking-[0.08em] uppercase text-sky mb-5">
               Real example
             </span>
             <h2 style={{ fontSize: "clamp(26px,4vw,38px)", fontWeight: 700, lineHeight: 1.15, letterSpacing: "-0.02em" }}>
@@ -24,7 +24,7 @@ export default function CaseStudy() {
               {/* Left */}
               <div className="relative z-10 p-10 lg:p-14 flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-10">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-[14px] bg-[rgba(122,181,212,0.12)] text-sky text-[17px] font-bold">S</div>
+                  <div className="flex h-11 w-11 items-center justify-center rounded-[14px] bg-[rgba(122,173,168,0.18)] text-sky text-[17px] font-bold">S</div>
                   <div>
                     <p className="text-[15px] font-bold text-ink">Star Image Studio</p>
                     <p className="text-[13px] text-dim">Beauty Salon · San Jose, CA</p>
@@ -41,7 +41,7 @@ export default function CaseStudy() {
                 </div>
 
                 <div className="mb-6">
-                  <span className="inline-block rounded-tag bg-[rgba(122,181,212,0.12)] border border-[rgba(122,181,212,0.2)] px-3 py-1 text-[10px] font-bold tracking-[0.1em] uppercase text-sky mb-3">
+                  <span className="inline-block rounded-tag bg-[rgba(122,173,168,0.18)] border border-[rgba(106,175,194,0.2)] px-3 py-1 text-[10px] font-bold tracking-[0.1em] uppercase text-sky mb-3">
                     The solution
                   </span>
                   <p className="text-[15px] text-muted leading-[1.7]">
@@ -59,7 +59,7 @@ export default function CaseStudy() {
 
               {/* Right — mockup */}
               <div className="flex items-center justify-center p-8 lg:p-12 bg-warm border-t lg:border-t-0 lg:border-l border-[rgba(26,26,26,0.07)]">
-                <div className="w-full max-w-sm rounded-card border border-[rgba(122,181,212,0.25)] bg-surface overflow-hidden shadow-card-hover">
+                <div className="w-full max-w-sm rounded-card border border-[rgba(106,175,194,0.25)] bg-surface overflow-hidden shadow-card-hover">
                   <div className="flex items-center gap-1.5 border-b border-[rgba(26,26,26,0.07)] bg-bg px-4 py-2.5">
                     <span className="h-2.5 w-2.5 rounded-full bg-[rgba(26,26,26,0.12)]" />
                     <span className="h-2.5 w-2.5 rounded-full bg-[rgba(26,26,26,0.12)]" />
@@ -68,7 +68,7 @@ export default function CaseStudy() {
                   </div>
                   <div className="p-5">
                     <div className="flex items-center justify-between mb-5">
-                      <div className="h-4 w-28 rounded-full bg-[rgba(122,181,212,0.2)]" />
+                      <div className="h-4 w-28 rounded-full bg-[rgba(106,175,194,0.2)]" />
                       <div className="h-7 w-20 rounded-full bg-terra/15" />
                     </div>
                     <div className="rounded-[14px] bg-bg border border-[rgba(26,26,26,0.07)] p-4 mb-4">

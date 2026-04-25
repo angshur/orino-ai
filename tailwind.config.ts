@@ -9,14 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg:      "#F9F7F2",
-        surface: "#FFFFFF",
-        warm:    "#F2EFE8",
-        ink:     "#1A1A1A",
-        muted:   "#6B6560",
+        bg:      "#ede8de",
+        surface: "#f4f0e7",
+        warm:    "#e5dfd4",
+        ink:     "#1c1814",
+        muted:   "#6e6560",
         dim:     "#9B948D",
-        sky:     "#7AB5D4",
-        terra:   "#D4714E",
+        sky:     "#6AAFC2",
+        terra:   "#C87050",
+        sage:    "#7AADA8",
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
@@ -28,8 +29,8 @@ const config: Config = {
         inner: "12px",
       },
       boxShadow: {
-        card:       "0 1px 4px rgba(26,26,26,0.06), 0 6px 20px rgba(26,26,26,0.05)",
-        "card-hover": "0 4px 28px rgba(26,26,26,0.1)",
+        card:         "0 1px 4px rgba(26,26,26,0.06), 0 6px 20px rgba(26,26,26,0.05)",
+        "card-hover": "0 4px 28px rgba(26,26,26,0.10)",
       },
     },
   },
