@@ -1,114 +1,50 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
+import { FadeUp } from "@/components/ui/FadeUp";
 
 const steps = [
-  {
-    n: "1",
-    title: "Tell us about your business",
-    body: "10 minutes. We learn your services, hours, and goals.",
-  },
-  {
-    n: "2",
-    title: "We build your AI layer",
-    body: "48 hours. Receptionist configured, website live, SDR ready.",
-  },
-  {
-    n: "3",
-    title: "Watch it work",
-    body: "Leads captured. Calls answered. Meetings booked. You focus on delivery.",
-  },
+  { n: "01", title: "Tell us about your business", body: "10 minutes. We learn your services, hours, and goals." },
+  { n: "02", title: "We build your AI layer",       body: "48 hours. Receptionist configured, website live, SDR ready." },
+  { n: "03", title: "Watch it work",                body: "Leads captured. Calls answered. Meetings booked. You focus on delivery." },
 ];
 
 export default function HowItWorks() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
-      { threshold: 0.2 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section id="how-it-works" className="bg-white py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="how-it-works" className="bg-[#f8f8f7] border-t border-[rgba(0,0,0,0.08)] py-24">
+      <div className="mx-auto max-w-[1120px] px-10">
 
-        {/* Header */}
-        <div className="text-center mb-16">
-          <p className="uppercase text-teal font-semibold mb-4"
-            style={{ fontSize: "13px", letterSpacing: "0.08em" }}>
-            The process
-          </p>
-          <h2
-            className="font-heading font-bold text-ink"
-            style={{ fontSize: "clamp(28px, 4vw, 36px)", letterSpacing: "-0.01em", lineHeight: 1.2 }}
-          >
-            Up and running in 48 hours
-          </h2>
-        </div>
-
-        {/* Steps */}
-        <div ref={ref} className="relative">
-
-          {/* Dashed connector line — desktop only */}
-          <div
-            className="hidden md:block absolute top-10 left-[calc(16.67%+24px)] right-[calc(16.67%+24px)] h-px"
-            style={{
-              borderTop: "2px dashed #0F766E",
-              opacity: 0.3,
-            }}
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-            {steps.map((step, i) => (
-              <div
-                key={step.n}
-                className="relative flex flex-col items-center text-center"
-                style={{
-                  opacity: visible ? 1 : 0,
-                  transform: visible ? "translateY(0)" : "translateY(24px)",
-                  transition: `opacity 0.55s ease ${i * 120}ms, transform 0.55s ease ${i * 120}ms`,
-                }}
-              >
-                {/* Number circle */}
-                <div className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-teal-light border-2 border-teal/20 mb-6">
-                  <span
-                    className="font-heading font-light text-teal select-none"
-                    style={{ fontSize: "40px", lineHeight: 1 }}
-                  >
-                    {step.n}
-                  </span>
-                </div>
-
-                <h3
-                  className="font-heading font-semibold text-ink mb-3"
-                  style={{ fontSize: "18px" }}
-                >
-                  {step.title}
-                </h3>
-                <p className="text-sm text-[#475569] leading-relaxed max-w-[220px]">
-                  {step.body}
-                </p>
-              </div>
-            ))}
+        <FadeUp>
+          <div className="text-center mb-14">
+            <span className="block text-[11px] font-semibold tracking-[0.1em] uppercase text-accent mb-4">
+              The process
+            </span>
+            <h2 className="text-[clamp(26px,4vw,36px)] font-bold tracking-[-0.02em] leading-[1.12] text-ink">
+              Up and running in 48 hours
+            </h2>
           </div>
+        </FadeUp>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {steps.map((s, i) => (
+            <FadeUp key={s.n} delay={i * 80}>
+              <div className="flex gap-4 rounded-card border border-[rgba(0,0,0,0.08)] bg-white p-6">
+                <span className="text-[12px] font-bold text-dim min-w-[28px] pt-0.5">{s.n}</span>
+                <div>
+                  <h3 className="text-[16px] font-semibold text-ink mb-2">{s.title}</h3>
+                  <p className="text-[14px] text-muted leading-[1.65]">{s.body}</p>
+                </div>
+              </div>
+            </FadeUp>
+          ))}
         </div>
 
-        {/* CTA nudge */}
-        <div className="mt-14 text-center">
-          <a
-            href="/contact"
-            className="inline-flex items-center rounded-btn bg-amber px-7 py-3.5 text-base font-bold text-ink shadow-sm hover:bg-amber-dark transition-all hover:-translate-y-px"
-          >
-            Get started in 10 minutes
-          </a>
-        </div>
+        <FadeUp delay={320}>
+          <div className="mt-12 text-center">
+            <a href="/contact"
+              className="inline-flex items-center rounded-btn bg-ink px-[22px] py-[11px] text-[15px] font-semibold text-white hover:bg-[#1a1a1a] transition-all hover:-translate-y-px">
+              Get started in 10 minutes
+            </a>
+          </div>
+        </FadeUp>
+
       </div>
     </section>
   );
