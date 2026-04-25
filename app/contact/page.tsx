@@ -10,7 +10,7 @@ const checks = [
 export default function ContactPage() {
   return (
     <>
-      <main className="pt-[60px] bg-[#f8f8f7]">
+      <main className="pt-[64px] bg-bg">
         <section className="py-20">
           <div className="mx-auto max-w-[1120px] px-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -18,7 +18,7 @@ export default function ContactPage() {
               {/* Left */}
               <FadeUp>
                 <div>
-                  <span className="block text-[11px] font-semibold tracking-[0.1em] uppercase text-accent mb-5">
+                  <span className="block text-[11px] font-semibold tracking-[0.1em] uppercase text-sky mb-5">
                     Let&apos;s talk
                   </span>
                   <h1 className="text-[clamp(30px,4vw,44px)] font-bold tracking-[-0.02em] leading-[1.12] text-ink mb-5">
@@ -31,8 +31,8 @@ export default function ContactPage() {
                   <ul className="flex flex-col gap-4 mb-12">
                     {checks.map((item) => (
                       <li key={item} className="flex items-start gap-3">
-                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(0,129,242,0.1)]">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3 w-3 text-accent">
+                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgba(122,181,212,0.1)]">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3 w-3 text-sky">
                             <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clipRule="evenodd"/>
                           </svg>
                         </span>
@@ -42,13 +42,13 @@ export default function ContactPage() {
                   </ul>
 
                   {/* Team */}
-                  <div className="flex items-center gap-4 pt-8 border-t border-[rgba(0,0,0,0.08)]">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white font-semibold text-[15px]">
+                  <div className="flex items-center gap-4 pt-8 border-t border-[rgba(26,26,26,0.08)]">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-terra text-white font-semibold text-[15px]">
                       B
                     </div>
                     <div>
                       <a href="https://www.linkedin.com/in/bipashahr/" target="_blank" rel="noopener noreferrer"
-                        className="text-[15px] font-semibold text-ink hover:text-accent transition-colors">
+                        className="text-[15px] font-semibold text-ink hover:text-sky transition-colors">
                         Bipasha ↗
                       </a>
                       <p className="text-[12px] text-dim">Orino.ai</p>
@@ -59,11 +59,11 @@ export default function ContactPage() {
 
               {/* Right — Calendly */}
               <FadeUp delay={100}>
-                <div className="rounded-card border border-[rgba(0,0,0,0.08)] bg-white overflow-hidden shadow-card-hover">
-                  <div className="border-b border-[rgba(0,0,0,0.08)] bg-[#f8f8f7] px-7 py-5">
+                <div className="rounded-card border border-[rgba(26,26,26,0.08)] bg-surface overflow-hidden shadow-card-hover">
+                  <div className="border-b border-[rgba(26,26,26,0.08)] bg-bg px-7 py-5">
                     <div className="flex items-center gap-3">
-                      <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[rgba(0,129,242,0.08)]">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-accent">
+                      <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[rgba(122,181,212,0.08)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-sky">
                           <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/>
                         </svg>
                       </span>
@@ -76,7 +76,7 @@ export default function ContactPage() {
 
                   <div className="px-7 py-8">
                     {/* Mock calendar */}
-                    <div className="rounded-card border border-[rgba(0,0,0,0.08)] bg-[#f8f8f7] p-4 mb-6">
+                    <div className="rounded-card border border-[rgba(26,26,26,0.08)] bg-bg p-4 mb-6">
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-[13px] font-semibold text-ink">May 2026</span>
                         <div className="flex gap-2">
@@ -97,7 +97,7 @@ export default function ContactPage() {
                           return (
                             <div key={i} className={`rounded-lg h-7 flex items-center justify-center text-[11px] font-medium
                               ${day < 1 || day > 31 ? "text-transparent" : ""}
-                              ${selected ? "bg-accent text-white" : available ? "bg-[rgba(0,129,242,0.08)] text-accent cursor-pointer hover:bg-accent hover:text-white transition-colors" : "text-dim"}`}>
+                              ${selected ? "bg-terra text-white" : available ? "bg-[rgba(122,181,212,0.08)] text-sky cursor-pointer hover:bg-terra hover:text-white transition-colors" : "text-dim"}`}>
                               {day >= 1 && day <= 31 ? day : ""}
                             </div>
                           );

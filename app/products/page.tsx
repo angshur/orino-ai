@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 
 const ic = (path: React.ReactNode) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-    strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-accent">
+    strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-sky">
     {path}
   </svg>
 );
@@ -63,11 +63,11 @@ const sections: { label: string; headline: string; products: Product[] }[] = [
 
 function Tag({ status }: { status: "live" | "ask" }) {
   return status === "live" ? (
-    <span className="inline-flex items-center gap-1 rounded-pill bg-[rgba(16,185,129,0.08)] border border-[rgba(16,185,129,0.2)] px-2.5 py-0.5 text-[11px] font-semibold text-emerald-600">
+    <span className="inline-flex items-center gap-1 rounded-tag bg-[rgba(16,185,129,0.08)] border border-[rgba(16,185,129,0.2)] px-2.5 py-0.5 text-[11px] font-semibold text-emerald-600">
       <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />Live
     </span>
   ) : (
-    <span className="inline-flex rounded-pill bg-[#f8f8f7] border border-[rgba(0,0,0,0.08)] px-2.5 py-0.5 text-[11px] font-semibold text-dim">
+    <span className="inline-flex rounded-tag bg-bg border border-[rgba(26,26,26,0.08)] px-2.5 py-0.5 text-[11px] font-semibold text-dim">
       Ask us
     </span>
   );
@@ -76,13 +76,13 @@ function Tag({ status }: { status: "live" | "ask" }) {
 export default function ProductsPage() {
   return (
     <>
-      <main className="pt-[60px]">
+      <main className="pt-[64px]">
 
         {/* Header */}
-        <section className="bg-[#f8f8f7] py-20 border-b border-[rgba(0,0,0,0.08)]">
+        <section className="bg-bg py-20 border-b border-[rgba(26,26,26,0.08)]">
           <div className="mx-auto max-w-[1120px] px-10 text-center">
             <FadeUp>
-              <span className="block text-[11px] font-semibold tracking-[0.1em] uppercase text-accent mb-4">
+              <span className="block text-[11px] font-semibold tracking-[0.1em] uppercase text-sky mb-4">
                 Full Product Portfolio
               </span>
               <h1 className="text-[clamp(32px,5vw,52px)] font-bold tracking-[-0.02em] leading-[1.12] text-ink mb-5">
@@ -94,11 +94,11 @@ export default function ProductsPage() {
         </section>
 
         {sections.map((section, si) => (
-          <section key={section.label} className={`py-20 border-b border-[rgba(0,0,0,0.08)] ${si % 2 === 0 ? "bg-white" : "bg-[#f8f8f7]"}`}>
+          <section key={section.label} className={`py-20 border-b border-[rgba(26,26,26,0.08)] ${si % 2 === 0 ? "bg-surface" : "bg-bg"}`}>
             <div className="mx-auto max-w-[1120px] px-10">
               <FadeUp>
                 <div className="mb-10">
-                  <h2 className="text-[22px] font-bold text-ink mb-1 pb-1 border-b-2 border-accent inline-block">
+                  <h2 className="text-[22px] font-bold text-ink mb-1 pb-1 border-b-2 border-terra inline-block">
                     {section.label}
                   </h2>
                   <p className="text-[15px] text-muted mt-2">{section.headline}</p>
@@ -107,10 +107,10 @@ export default function ProductsPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {section.products.map((p, pi) => (
                   <FadeUp key={p.name} delay={pi * 60}>
-                    <div className="group flex flex-col h-full rounded-card border border-[rgba(0,0,0,0.08)] bg-white p-6
+                    <div className="group flex flex-col h-full rounded-card border border-[rgba(26,26,26,0.08)] bg-surface p-6
                       hover:border-[rgba(0,0,0,0.12)] hover:shadow-card-hover transition-all duration-150">
                       <div className="flex items-start justify-between mb-4">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[rgba(0,129,242,0.08)]">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[rgba(122,181,212,0.08)]">
                           {p.icon}
                         </div>
                         <Tag status={p.status} />
@@ -126,7 +126,7 @@ export default function ProductsPage() {
         ))}
 
         {/* Bottom CTA */}
-        <section className="bg-white py-20">
+        <section className="bg-surface py-20">
           <div className="mx-auto max-w-[1120px] px-10 text-center">
             <FadeUp>
               <h2 className="text-[clamp(20px,3vw,28px)] font-bold tracking-[-0.02em] text-ink mb-3">
