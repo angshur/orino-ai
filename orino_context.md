@@ -1,14 +1,14 @@
-# Orino.ai — Project Context Prompt
+# Viao.ai — Project Context Prompt
 *Use this at the start of any Claude Code or Claude chat session to restore full context.*
 
 ---
 
-## What is Orino.ai?
+## What is Viao.ai?
 
-Orino.ai is a done-for-you AI services company that builds AI receptionists, smart websites, and outbound SDR systems for local businesses and B2B sales teams. Everything is set up in 48 hours. The business owner touches nothing.
+Viao.ai is a done-for-you AI services company that builds AI receptionists, smart websites, and outbound SDR systems for local businesses and B2B sales teams. Everything is set up in 48 hours. The business owner touches nothing.
 
-**Live site:** https://orino-ai.vercel.app
-**Domain target:** orino.ai
+**Live site:** https://viao-ai.vercel.app
+**Domain target:** viao.ai
 
 **One sentence pitch:**
 > "We build your AI receptionist, smart website, and sales outreach system. Done for you in 48 hours. You focus on your work."
@@ -17,7 +17,7 @@ Orino.ai is a done-for-you AI services company that builds AI receptionists, sma
 
 ## The Team
 
-- **Builder:** Angshuman (not listed publicly) — Head of Product at TapClicks, building Orino as a weekend side venture
+- **Builder:** Angshuman (not listed publicly) — Head of Product at TapClicks, building Viao as a weekend side venture
 - **Sales:** Mike Rosner (NYC) — ex-CRO/SVP Sales, MarTech/AdTech background, strong agency and media company network
 - **Face of company:** Bipasha — listed publicly on the site
 
@@ -30,7 +30,7 @@ Small businesses and B2B sales teams are losing customers and revenue because:
 - No website or bad website = no lead capture
 - Manual outreach = too slow, too expensive, not enough pipeline
 
-Existing tools (GoHighLevel, My AI Front Desk, evyAI) either require the business owner to set it up themselves, or only create content without executing the outreach. Orino does everything done-for-you.
+Existing tools (GoHighLevel, My AI Front Desk, evyAI) either require the business owner to set it up themselves, or only create content without executing the outreach. Viao does everything done-for-you.
 
 ---
 
@@ -49,7 +49,7 @@ Adtech companies, media companies, SaaS sales teams (e.g. Mogl/Falcone)
 Core pain: can't find leads fast enough, outbound too slow
 
 ### GTM Channel
-Mike's agency and media company network → hungry sales reps → they sell to SMB clients → Orino delivers. Not one business at a time — agency reps as the distribution layer.
+Mike's agency and media company network → hungry sales reps → they sell to SMB clients → Viao delivers. Not one business at a time — agency reps as the distribution layer.
 
 ---
 
@@ -117,7 +117,7 @@ Mike's agency and media company network → hungry sales reps → they sell to S
 ### Phase 2 (GoHighLevel white-label)
 - White-label GoHighLevel as backend CRM/automation layer
 - Configure per vertical — salon package, dental package, restaurant package
-- Keep custom website generator as Orino's differentiator
+- Keep custom website generator as Viao's differentiator
 - GoHighLevel handles: CRM, email/SMS, review requests, re-engagement, social content
 
 ---
@@ -157,15 +157,15 @@ Mike's agency and media company network → hungry sales reps → they sell to S
 
 ## Competitive Landscape
 
-| Competitor | What they do | Why Orino wins |
+| Competitor | What they do | Why Viao wins |
 |---|---|---|
-| GoHighLevel | All-in-one CRM/automation for agencies | Too complex for SMBs to self-configure. Orino delivers done-for-you on top of GHL in Phase 2 |
-| My AI Front Desk | AI receptionist for SMBs | Self-serve. Orino white-labels and bundles it |
-| Durable | AI website builder | Self-serve at $22/mo. Orino is done-for-you at $299/mo |
-| Smith.ai | Human + AI receptionist | $97-1000/mo. Orino is pure AI, lower cost |
-| evyAI | LinkedIn content generator | Only creates content, doesn't execute outreach. Orino's AI SDR executes |
+| GoHighLevel | All-in-one CRM/automation for agencies | Too complex for SMBs to self-configure. Viao delivers done-for-you on top of GHL in Phase 2 |
+| My AI Front Desk | AI receptionist for SMBs | Self-serve. Viao white-labels and bundles it |
+| Durable | AI website builder | Self-serve at $22/mo. Viao is done-for-you at $299/mo |
+| Smith.ai | Human + AI receptionist | $97-1000/mo. Viao is pure AI, lower cost |
+| evyAI | LinkedIn content generator | Only creates content, doesn't execute outreach. Viao's AI SDR executes |
 
-**The gap Orino fills:** Done-for-you bundle (website + receptionist + SDR) delivered in 48 hours. Nobody is doing all three as a managed service for SMBs and sales teams.
+**The gap Viao fills:** Done-for-you bundle (website + receptionist + SDR) delivered in 48 hours. Nobody is doing all three as a managed service for SMBs and sales teams.
 
 ---
 
@@ -189,7 +189,7 @@ Target unit economics:
 - **Weekend-only builds** — Angshuman builds on weekends alongside full-time TapClicks role
 - **Frontend-first** — ship something clickable every session
 - **Phase 1:** Build the website generator custom. White-label everything else.
-- **Phase 2:** GoHighLevel white-label as backend. Orino becomes the configuration and delivery layer.
+- **Phase 2:** GoHighLevel white-label as backend. Viao becomes the configuration and delivery layer.
 - **Never over-engineer** — SQLite before Postgres, monolith before microservices
 - **Start manual, then automate** — onboard first 5 clients manually, then systematize
 
@@ -197,7 +197,7 @@ Target unit economics:
 
 ## Current Status
 
-- [x] Site live at https://orino-ai.vercel.app
+- [x] Site live at https://viao-ai.vercel.app
 - [x] Three pages: Homepage, Products, Contact
 - [x] Design system implemented
 - [x] Copy finalized
@@ -226,6 +226,6 @@ Target unit economics:
 
 Paste the entire contents of this file at the start of any Claude Code or Claude chat session with the prompt:
 
-> "Read this context file fully before we start. This is the Orino.ai project. [paste file contents]. Today's goal is: [your specific task for this session]."
+> "Read this context file fully before we start. This is the Viao.ai project. [paste file contents]. Today's goal is: [your specific task for this session]."
 
 This restores full project state without re-explaining everything from scratch.

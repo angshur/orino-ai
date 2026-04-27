@@ -22,7 +22,7 @@ export default function FinalCTA() {
                 <p className="text-[13px] text-[rgba(255,255,255,0.35)]">
                   <a href="https://www.linkedin.com/in/bipashahr/" target="_blank" rel="noopener noreferrer"
                     className="text-[rgba(255,255,255,0.5)] hover:text-white transition-colors">Bipasha</a>
-                  {" "}· Orino.ai · Response within 24 hours
+                  {" "}· Viao.ai · Response within 24 hours
                 </p>
               </div>
             </div>

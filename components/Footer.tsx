@@ -19,7 +19,7 @@ const columns = [
     heading: "Contact",
     links: [
       { label: "Book a Free Call", href: "/contact" },
-      { label: "hello@orino.ai",   href: "mailto:hello@orino.ai" },
+      { label: "hello@viao.ai",   href: "mailto:hello@viao.ai" },
     ],
   },
 ];
@@ -31,8 +31,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="flex h-7 w-7 items-center justify-center rounded-[8px] bg-terra text-white text-[13px] font-bold">O</span>
-              <span className="text-[17px] font-bold tracking-[-0.03em]">Orino</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-[8px] bg-terra text-white text-[13px] font-bold">V</span>
+              <span className="text-[17px] font-bold tracking-[-0.03em]">Viao</span>
             </div>
             <p className="text-[14px] text-[rgba(255,255,255,0.38)] leading-relaxed">
               Done-for-you AI. Set up in 48 hours.
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 pt-6 border-t border-[rgba(255,255,255,0.08)] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[13px] text-[rgba(255,255,255,0.22)]">© 2026 Orino.ai</p>
+          <p className="text-[13px] text-[rgba(255,255,255,0.22)]">© 2026 Viao.ai</p>
           <p className="text-[13px] text-[rgba(255,255,255,0.22)]">All rights reserved.</p>
         </div>
       </div>

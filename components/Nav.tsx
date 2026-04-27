@@ -25,9 +25,9 @@ export default function Nav() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
             <span className="flex h-7 w-7 items-center justify-center rounded-[8px] bg-terra text-white text-[13px] font-bold">
-              O
+              V
             </span>
-            <span className="text-[17px] font-bold tracking-[-0.03em] text-ink">Orino</span>
+            <span className="text-[17px] font-bold tracking-[-0.03em] text-ink">Viao</span>
             <span className="hidden sm:block text-[13px] text-muted leading-none">AI for your business</span>
           </Link>
 
@@ -61,7 +61,7 @@ export default function Nav() {
       <div className={`fixed inset-0 z-[100] bg-bg flex flex-col transition-all duration-200 md:hidden ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
         <div className="flex h-[64px] items-center justify-between px-6 border-b border-[rgba(26,26,26,0.07)]">
           <Link href="/" onClick={() => setOpen(false)}
-            className="text-[17px] font-bold tracking-[-0.03em] text-ink">Orino</Link>
+            className="text-[17px] font-bold tracking-[-0.03em] text-ink">Viao</Link>
           <button onClick={() => setOpen(false)} aria-label="Close menu"
             className="flex items-center justify-center w-9 h-9 rounded-[10px] hover:bg-[rgba(26,26,26,0.06)] transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Orino.ai — Done-for-you AI. Set up in 48 hours.",
+  title: "Viao.ai — Done-for-you AI. Set up in 48 hours.",
   description:
     "We build your AI receptionist, smart website, and sales outreach system. Done for you in 48 hours. You focus on your work.",
 };

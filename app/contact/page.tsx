@@ -51,7 +51,7 @@ export default function ContactPage() {
                         className="text-[15px] font-semibold text-ink hover:text-sky transition-colors">
                         Bipasha ↗
                       </a>
-                      <p className="text-[12px] text-dim">Orino.ai</p>
+                      <p className="text-[12px] text-dim">Viao.ai</p>
                     </div>
                   </div>
                 </div>

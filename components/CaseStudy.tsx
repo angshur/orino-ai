@@ -11,7 +11,7 @@ export default function CaseStudy() {
               Real example
             </span>
             <h2 style={{ fontSize: "clamp(26px,4vw,38px)", fontWeight: 700, lineHeight: 1.15, letterSpacing: "-0.02em" }}>
-              <span className="text-muted font-normal">What Orino did for </span>
+              <span className="text-muted font-normal">What Viao did for </span>
               <span className="text-ink font-bold">Star Image Studio</span>
             </h2>
           </div>
