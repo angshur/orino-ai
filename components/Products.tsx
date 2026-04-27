@@ -1,8 +1,9 @@
+import Image from "next/image";
 import { FadeUp } from "@/components/ui/FadeUp";
 
 const products = [
   {
-    img: "/image-1-ai-receptionist.html",
+    img: "/receptionist.png",
     imgAlt: "AI Receptionist — problem and solution overview",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-sky">
@@ -15,7 +16,7 @@ const products = [
     delay: 0,
   },
   {
-    img: "/image-2-smart-website.html",
+    img: "/website.png",
     imgAlt: "Smart Website — built from your reviews in 48 hours",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-sky">
@@ -28,8 +29,8 @@ const products = [
     delay: 80,
   },
   {
-    img: "/image-3-solution-details.html",
-    imgAlt: "AI SDR — one intelligent system, an entire workforce",
+    img: "/sdr.png",
+    imgAlt: "AI SDR — one intelligent system, a full outreach engine",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-sky">
         <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -66,13 +67,13 @@ export default function Products() {
                 hover:border-[rgba(26,26,26,0.14)] hover:shadow-card-hover transition-all duration-200 cursor-default">
 
                 {/* Preview */}
-                <div className="relative w-full overflow-hidden bg-warm border-b border-[rgba(26,26,26,0.07)]" style={{ aspectRatio: "16/9" }}>
-                  <iframe
+                <div className="relative w-full overflow-hidden border-b border-[rgba(26,26,26,0.07)]" style={{ aspectRatio: "16/9" }}>
+                  <Image
                     src={p.img}
-                    title={p.imgAlt}
-                    scrolling="no"
-                    className="absolute inset-0 pointer-events-none"
-                    style={{ border: "none", width: "1440px", height: "720px", transform: "scale(0.25)", transformOrigin: "top left" }}
+                    alt={p.imgAlt}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
 
